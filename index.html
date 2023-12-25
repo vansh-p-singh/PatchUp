@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Please Man Ja Ankita!!!</title>
+    <title>Kyu Aayi Ho ab yha?!!!</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
 <body>
     <div class="bunny">
-        <img src="bear1.gif" alt="">
+        <!-- <img src="bear1.jpg" alt=""> -->
     </div>
-    <h3>Can We Please again Patch Up???</h3>
+    <h3>Dubara sorry kehna chahti ho??</h3>
     <div class="options">
         <button class="btn yes">Yes</button>
         <button class="btn no">No</button>
 
     </div>
-    <footer>Khoob Sare Pyaar ki Zeenat se Sajakar - Vansh</footer>
+    <footer>Please - Ab yha dubara kbhi na aana  - Vansh</footer>
 
-    <div class="notification">
+    <!-- <div class="notification">
         Baby Love You
-    </div>
+    </div> -->
 
     <div class="preloader">
         <img src="preloader.gif" alt="">
@@ -41,5 +41,30 @@
     </div>
 
     <script src="script.js"></script>
+    <!-- Add this script tag at the end of your HTML body -->
+<script>
+    document.getElementById('boxBtn').addEventListener('click', function () {
+        // Use AJAX to send a POST request to the backend when 'Yep' button is clicked
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'backend.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        // Add the 'yep' parameter to the request
+        xhr.send('yep=true');
+
+        // Handle the response from the backend
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // Log the response to the console (you can update this part as needed)
+                console.log(xhr.responseText);
+            }
+        };
+
+    });
+
+  
+
+</script>
+
 </body>
 </html>
